@@ -1,21 +1,21 @@
 <template>
   <img alt="Vue logo" src="src/assets/logo.png" />
-  <HelloWorld :msg="msg" />
+  <caseA :msg="msg" />
   <button @click="setUndefined">set undefined</button>
   <button @click="setObject">set Object</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import caseA from './components/caseA.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    caseA
   },
   data() {
     return {
-      msg: ""
+      msg: "test",
     }
   },
   methods: {
@@ -25,9 +25,10 @@ export default {
     },
     setObject() {
       console.log("object");
-      this.msg = {
-        test: "abc",
-      };
+      // this.msg = {
+      //   test: "abc",
+      // };
+      this.msg = Number(4444);
     },
   },
 }
